@@ -1,0 +1,131 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-wheel-metadata/
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+.ENV/
+venv.bak/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+/media/
+staticfiles/
+# optionally ignore collected static (if you don't want it in repo)
+# /static/
+
+# Migrations: usually tracked; do NOT ignore migrations/ unless intentional
+# **/migrations/*.py
+# **/migrations/__pycache__/
+
+# Keycloak / secrets / env files
+.env
+.env.* 
+*.env
+.keycloak.json
+secrets.json
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS / Windows
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite3
+
+# SSH keys, certificates
+*.pem
+*.key
+*.crt
+
+# Python bytecode and backups
+*~
+*.swp
+*.swo
+
+# Packaging
+*.manifest
+*.spec
+
+# PyCharm caches
+.idea/
+*.iml
+
+# mypy
+.mypy_cache/
+
+# node / frontend (if present)
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnp/
+.pnp.js
+
+# Docker
+docker-compose.override.yml
+.docker
+docker-compose.*.yml
+
+# Misc
+coverage/
+*.cover
+dist/
+```// filepath: /home/rhay/sandbox/drf/iam/.gitignore
+# Byte-compiled /

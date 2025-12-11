@@ -1,0 +1,43 @@
+# Core
+Django>=5.2,<5.3
+djangorestframework>=3.16,<3.17
+django-filter>=24.3,<25.0
+django-markdownx>=4.0,<5.0
+markdown>=3.7,<4.0
+django-environ>=0.11,<0.12
+requests==2.32.5
+pillow
+
+# JWT auth
+djangorestframework-simplejwt>=5.5,<5.6
+
+# CORS
+django-cors-headers>=4.9,<5.0
+
+# Admin import/export
+django-import-export>=4.3,<5.0
+django-admin-interface>=0.29,<0.30
+
+# API logging (DRF)
+drf-api-logger>=1.1.21,<2.0
+
+# Database - PostgreSQL
+psycopg>=3.1,<3.2
+
+# Redis client + Django cache backend
+redis>=6.0,<7.0
+django-redis>=6.0,<7.0
+
+# Code formatter
+black>=25.9,<26.0
+isort>=5.13,<6.0
+
+# Docs
+drf-yasg>=1.21,<2.0
+drf-spectacular
+
+# Tools
+django-silk
+
+python-keycloak
+python-jose
