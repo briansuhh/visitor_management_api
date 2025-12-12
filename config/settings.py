@@ -37,8 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # third-party apps
     'rest_framework',
     'rest_framework_simplejwt',
+    "corsheaders",
+
+    # local apps
+    'apps.core',
+    'apps.users',
+
     #documentation tool
     "drf_spectacular",
     "silk",
@@ -52,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     "silk.middleware.SilkyMiddleware",
 ]
 
@@ -127,9 +136,28 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Custom User Model for keycloak integration
+AUTH_USER_MODEL = "users.CustomUser"
+
+# REST FRAMEWORK SETTINGS
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "apps.users.custom_auth.KeycloakAuthentication",
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+KEYCLOAK_ISSUER = "http://localhost:8080/realms/visitor-management"
+
+KEYCLOAK_AUDIENCE = "visitor-management-api"
+KEYCLOAK_JWKS_URL = f"{KEYCLOAK_ISSUER}/protocol/openid-connect/certs"
+
+
 # SPECTACULAR SETTINGS
 SPECTACULAR_SETTINGS = {
     "TITLE": "Visitor Management API",
     "DESCRIPTION": "API documentation for Visitor Management",
     "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
 }
