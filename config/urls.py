@@ -26,6 +26,6 @@ urlpatterns = [
     path("", HealthCheckView.as_view(), name="health-check"),
     path('admin/', admin.site.urls),
     # path for documentation tool
-    path("api/docs", SpectacularAPIView.as_view(), name="schema"),
-    path("api/schema", SpectacularSwaggerView.as_view(), name="schema"),
+    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("api/docs/", SpectacularSwaggerView.as_view(url_name='schema'), name="swagger-ui"),
 ]
